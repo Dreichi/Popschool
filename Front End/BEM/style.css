@@ -1,0 +1,48 @@
+html, body {
+    margin: 0;
+    height: 100%;
+  }
+
+.entete__nav {
+    position: relative;
+}
+
+.entete__nav--logotitre {
+    display: flex;
+    background-color: rgba(91, 53, 157, 1);
+}
+
+.entete__nav--titre {
+    margin-left: 2%;
+}
+
+.entete__nav--logo {
+    margin-left: 2%;
+}
+
+.entete__nav--menu--list {
+    list-style-type: none;    
+}
+
+input[type='checkbox'] {
+    display: none;
+}
+
+.entete__nav--menu {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+}
+
+/*input:checked ~ .entete__nav--menu--elements {
+    top:10%;
+    position: fixed;
+}*/
+
+.entete__container .entete__container--background{
+    background-size: contain;
+    width: 1000px;
+}
+
+
+

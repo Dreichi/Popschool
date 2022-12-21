@@ -1,96 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <title>Document</title>
 </head>
 
 <body>
-    <header class="entete">
-        <nav class="entete__nav">
+    <nav class="entete__nav">
+        <div class="nav__container">
             <a class="entete__nav--logotitre">
-                <img src="logo.svg" alt="" class="entete__nav--logo">
-                <h2 class="entete__nav--titre">Mon petit graphisme</h2>
+                <img src="img/logo.svg" alt="" class="entete__nav--logo">
+                <h1 class="entete__nav--titre">Mon petit graphisme</h1>
             </a>
-            <div class="entete__nav--menu">
-                <ul class="entete__nav--menu--list">
-                    <input type="checkbox" checked="checked" class="check" id="hamburger" />
-                    <label for="hamburger"><img class="hamburger" src="hamburger.svg" alt="menu">
-                        <li href="#" class="entete__nav--menu--elements">Accueil</li>
-                        <li h ref="#" class="entete__nav--menu--elements">Contact</li>
-                    </label>
-                </ul>
-            </div>
-        </nav>
-        <div class="entete__container">
-            <img class="entete__container--background" src="./background.png" alt="background">
-            <div class="entete__container--logotitre">
-                <img src="#" alt="" class="entete__container--logo">
-                <h2 class="entete__container--titre">Mon petit graphisme</h2>
-            </div>
-            <h3 class="entete__container--titre">Agence de graphisme</h3>
+            <img class="nav__burger" src="./img/hamburger.svg" alt="burger">
         </div>
+        <div class="nav__items">
+            <a class="nav__item" href="#">Accueil</a>
+            <a class="nav__item" href="#">Contact</a>
+        </div>
+    </nav>
+    <header class="header">
+        <a class="header__link" href="#">
+            <img class="header__logo" src="./img/logo.svg" alt="logo">
+            <p class="header__brand">Mon petit graphisme</p>
+        </a>
+        <h2 class="header__title">Agence de graphisme</h2>
     </header>
-    <div class="description">
-        <h2 class="description--titre">Mon petit graphisme est une agence de graphisme qui aide les entreprises à créer
-            des visuels attractifs.
-        </h2>
-        <div class="description__container">
-            <section class="description__container--graphisme">
-                <img src="#" alt="" class="description__container--graphisme--image">
-                <h2 class="description__container--titre">GRAPHISME</h2>
-                <p class="description__container--paragraphe">Que vous ayez besoin de graphisme pour un site web, des
-                    cartes de visite ou des affiches, nous réalisons des visuels dont vous serez fiers.</p>
-            </section>
-            <section class="description__container--strategie">
-                <img src="#" alt="" class="description__container--strategie--image">
-                <h2 class="description__container--strategie--titre">STRATÉGIE</h2>
-                <p class="description__container--strategie--paragraphe">Plutôt que de suggérer des graphismes à la
-                    mode, nous prenons le temps de comprendre vos objectifs et nous nous adaptons à vos besoins.</p>
-            </section>
-            <section class="description__container--illustrations">
-                <img class="description__container--illustrations--image" src="#" alt="">
-                <h2 class="description__container--illustrations--titre">ILLUSTRATIONS</h2>
-                <p class="description__container--illustrations--paragraphe">Nos graphistes vous proposerons des
-                    illustrations 100 % originales.</p>
+
+    <main>
+        <div class="description">
+            <p class="description--titre">Mon petit graphisme est une agence de graphisme qui aide les entreprises à
+                créer
+                des visuels attractifs.
+            </p>
+            <div class="description__container">
+                <article class="description__container--graphisme">
+                    <img src="#" alt="" class="description__container--graphisme--image">
+                    <h2 class="description__container--titre">GRAPHISME</h2>
+                    <img src="./img/graphisme.svg" alt="">
+                    <p class="description__container--paragraphe">Que vous ayez besoin de graphisme pour un site web,
+                        des
+                        cartes de visite ou des affiches, nous réalisons des visuels dont vous serez fiers.</p>
+                </article>
+                <article class="description__container--strategie">
+                    <img src="#" alt="" class="description__container--strategie--image">
+                    <h2 class="description__container--strategie--titre">STRATÉGIE</h2>
+                    <img src="./img/strategie.svg" alt="">
+                    <p class="description__container--strategie--paragraphe">Plutôt que de suggérer des graphismes à la
+                        mode, nous prenons le temps de comprendre vos objectifs et nous nous adaptons à vos besoins.</p>
+                </article>
+                <article class="description__container--illustrations">
+                    <img class="description__container--illustrations--image" src="#" alt="">
+                    <h2 class="description__container--illustrations--titre">ILLUSTRATIONS</h2>
+                    <img src="./img/illustrations.png" alt="">
+                    <p class="description__container--illustrations--paragraphe">Nos graphistes vous proposerons des
+                        illustrations 100 % originales.</p>
+                </article>
+            </div>
+            <section class="commentaire__container">
+                <p class="commentaire__container--avis">“Mon petit graphisme est une excellente agence de graphisme. Les
+                    graphistes sont à l’écoute des besoins et m’ont permis de renouveler complétement la carte de mon
+                    restaurant.”</p>
+                <p class="commentaire__container--personne">Amandine, restauratrice</p>
             </section>
         </div>
-        <section class="commentaire__container">
-            <p class="commentaire__container--avis">“Mon petit graphisme est une excellente agence de graphisme. Les
-                graphistes sont à l’écoute des besoins et m’ont permis de renouveler complétement la carte de mon
-                restaurant.”</p>
-            <h2 class="commentaire__container--personne">Amandine, restauratrice</h2>
-        </section>
-    </div>
+    </main>
+
     <footer>
         <div class="footer__social">
             <h2 class="footer__social--location">Mon petit graphisme - Agence de graphisme basée à Paris</h2>
-            <img src="#" alt="twitter" class="footer__social--twitter">
-            <img src="#" alt="facebook" class="footer__social--facebook">
-            <img src="#" alt="instagram" class="footer__social--instagram">
+            <img src="./img/twitter.svg" alt="twitter" class="footer__social--icon">
+            <img src="./img/facebook.svg" alt="facebook" class="footer__social--icon facebook">
+            <img src="./img/instagram.svg" alt="instagram" class="footer__social--icon">
         </div>
-        <div class="footer__link">
-            <h2 class="footer__link--title">Accès rapide</h2>
-            <ul class="footer__link--list">
-                <li class="footer__link--list--elements">Acceuil</li>
-                <li class="footer__link--list--elements">Contact</li>
-            </ul>
-        </div>
-        <div class="footer__about">
-            <h2 class="footer__about--title">A propos</h2>
-            <ul class="footer__about--list">
-                <li class="footer__about--list--elements">Données personnelles</li>
-                <li class="footer__about--list--elements">Mentions légales</li>
-                <li class="footer__about--list--elements">Cookies</li>
-            </ul>
-        </div>
-        <div class="footer__position">
-            <h2 class="footer__position--title">Coordonées</h2>
-            <p class="footer__position--adress">10 Quai de la Charente<br>47017 Paris<br>01 23 45 67 89</p>
+        <div class="footer__link">>
+            <div class="footer__lien footer_menu">
+                <h2 class="footer__link--title">Accès rapide</h2>
+                <ul class="footer__link--list">
+                    <li class="footer__link--list--elements">Acceuil</li>
+                    <li class="footer__link--list--elements">Contact</li>
+                </ul>
+            </div>
+            <div class="footer__about footer_menu">
+                <h2 class="footer__about--title">A propos</h2>
+                <ul class="footer__about--list">
+                    <li class="footer__about--list--elements">Données personnelles</li>
+                    <li class="footer__about--list--elements">Mentions légales</li>
+                    <li class="footer__about--list--elements">Cookies</li>
+                </ul>
+            </div>
+            <div class="footer__position footer_menu">
+                <h2 class="footer__position--title">Coordonées</h2>
+                <p class="footer__position--adress">10 Quai de la Charente<br>47017 Paris<br>01 23 45 67 89</p>
+            </div>
         </div>
     </footer>
 </body>

@@ -1,48 +1,223 @@
+@import url('https://fonts.cdnfonts.com/css/roboto');
+
 html, body {
     margin: 0;
-    height: 100%;
+    padding: 0;
+    font-family: 'roboto';
   }
 
-.entete__nav {
-    position: relative;
-}
-
-.entete__nav--logotitre {
+  .nav__container {
+    background-color: #5b359d;
     display: flex;
-    background-color: rgba(91, 53, 157, 1);
+    align-items: center;
+    justify-content: space-around;
+}
+  .entete__nav--logotitre {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
 }
 
-.entete__nav--titre {
-    margin-left: 2%;
+.nav__burger {
+    height: 20px;
 }
 
 .entete__nav--logo {
-    margin-left: 2%;
+    height: 45px;
 }
 
-.entete__nav--menu--list {
-    list-style-type: none;    
+.entete__nav--titre {
+    color: white;
+    font-size: 1.5em;
+    font-style: italic;
+    font-weight: 500;
 }
 
-input[type='checkbox'] {
-    display: none;
+.nav__items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 0 20px 12%;
 }
 
-.entete__nav--menu {
-    position: absolute;
-    top: 10%;
-    right: 10%;
+.nav__item {
+    text-decoration: none;
+    color: black;
+    font-size: 1.1em;
 }
 
-/*input:checked ~ .entete__nav--menu--elements {
-    top:10%;
-    position: fixed;
-}*/
+h1 {
+    color: white;
+    font-weight: 500;
+    font-size: 36px;
+}
 
-.entete__container .entete__container--background{
-    background-size: contain;
-    width: 1000px;
+a {
+    text-decoration: none;
+}
+.header {
+    background-image: url(./img/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #5b359d;
+    text-decoration: none;
+    padding: 15px;
+}
+
+.header__brand {
+    color: white;
+    width: 100%;
+    font-style: italic;
+}
+
+.header__logo {
+    height: 30px;
+    text-align: center;
+}
+
+.header__title {
+    color: white;
+    font-size: 2em;
+    text-align: center;
 }
 
 
+.description--titre {
+    padding-top: 2rem;
+    color: rgba(0, 0, 0, 0.65);
+    margin-bottom: 40px;
+    font-size: 20px;
+}
 
+article {
+    text-align: center;
+}
+
+p {
+    width: 90%;
+    text-align: center;
+    margin: auto;
+    font-size: 16px;
+}
+
+.description__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin: 70px 0;
+}
+
+.commentaire__container--avis  {
+    margin-top: 50px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    text-justify: auto;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.65);
+}
+
+.commentaire__container--personne {
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.footer__social {
+    text-align: center;
+}
+
+.footer__social--icon {
+    width: 50px;
+    padding: 20px;
+    text-align: center;
+}
+
+.facebook {
+    width: 30px; 
+}
+
+footer {
+    background-color: #5B359D;
+    padding-bottom: 30px;
+}
+
+.footer__social--location {
+    text-align: center;
+    margin: auto;
+    padding-top: 20px;
+}
+
+footer li, footer a, footer p, footer h2 {
+    margin-left: 20px;
+    text-align: left;
+    color: white;
+}
+
+footer ul{
+    padding-right: 20px;
+}
+
+.footer__position p {
+    margin-left: 40px;
+    width: 50%;
+}
+
+.commentaire__container--personne {
+    margin: 20px auto;
+}
+
+@media screen and (min-width: 481px) {
+    .nav__burger {
+        display: none;
+    }
+
+    .entete__nav {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nav__container {
+        padding: 20px 30px;
+
+    }
+
+    .nav__items {
+        flex-direction: row;
+        align-items: center;
+        margin-right: 15px;
+    }
+    .description__container {
+    flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0 5%;
+}
+}
+
+@media (min-width:769px) {
+    .description__container {
+        flex-direction: row;
+        justify-content: center;
+        gap: 100px;
+        flex-wrap: nowrap;
+        align-items: inherit;
+}
+
+.footer__link {
+    display: flex;
+    justify-content: space-around;
+}
+}

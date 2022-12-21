@@ -38,8 +38,11 @@ print(my_list)
 def average(lower_value, higher_value, count):
     numbers = randint_list(lower_value, higher_value, count) 
     total = 0
+    count = 0
     for number in numbers:
-        total += number
+        if type(number) != int or type(number) is float:
+            total += number
+            count += 1
     result = total / len(numbers)
     return result
 

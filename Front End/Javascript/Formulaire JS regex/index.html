@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form>
+        <input type="text" name="name" id="name" placeholder="Nom">
+        <label for="name" class="error_message" id="errorName">Veuillez renseigner un nom</label>
+        <input type="text" name="firstname" id="firstname" placeholder="Prénom">
+        <input type="text" name="adress" id="adress" placeholder="Adresse">
+        <input type="text" name="phone" id="phone" placeholder="Téléphone">
+        <select name="size" id="size">
+            <option value="small">Normal</option>
+            <option value="medium">L</option>
+            <option value="large">XL</option>
+        </select>
+        <select name="extra" id="extra">
+            <option value="none">Rien</option>
+            <option value="cheese">Fromage</option>
+            <option value="tomato">Tomate</option>
+            <option value="olive">Olive</option>
+        </select>
+        <select name="pizza" id="pizza">
+            <option value="margherita">Margherita</option>
+            <option value="pepperoni">Pepperoni</option>
+            <option value="hawaiian">Hawaiian</option>
+            <option value="veggie">Veggie</option>
+        </select>
+        <textarea name="message" id="message" cols="30" rows="10" placeholder="Une instruction..."></textarea>
+        <button type="submit">Envoyer</button>
+    </form>
+    <script>
+        const form = document.querySelector('form');
+        const name = document.querySelector('#name');
+        const adress = document.querySelector('#adress');
+        const phone = document.querySelector('#phone');
+        const size = document.querySelector('#size');
+        const extra = document.querySelector('#extra');
+        const pizza = document.querySelector('#pizza');
+        const message = document.querySelector('#message');
+        const errorName = document.querySelector('#errorName');
+        const errorAdress = document.querySelector('#errorAdress');
+        const errorPhone = document.querySelector('#errorPhone');
+        const regexName = /^[a-zA-Z]+$/;
+        const regexAdress = /^(?:\w+\W+){0,5}(?:\w+)$/;
+        const regexPhone = /^0[1-9]([-. ]?[0-9]{2}){4}$/;
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            if (regexName.test(name.value)) {
+                errorName.style.display = 'none';
+            } else {
+                alert("Renseignez un nom");
+            }
+            if (regexAdress.test(adress.value)) {
+                errorAdress.style.display = 'none';
+            } else {
+                alert("Renseignez une adresse");
+            }
+            if (regexPhone.test(phone.value)) {
+                errorPhone.style.display = 'none';
+            } else {
+                alert("Renseignez un numéro");
+            }
+        })
+    </script>
+</body>
+</html>
